@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- <0link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">-->
+<link href="https://fonts.googleapis.com/css?family=Saira+Condensed" rel="stylesheet">
+
+<title>Anubhav D. Patel</title>
+<script>
+
+function toggleDropDownMenu()
+{
+  document.getElementById("dropDownContent").style.display="block";
+  document.getElementById("dropDown").classList.toggle("menuPressed");
+}
+
+window.onclick = function (event) {
+  if (!event.target.matches("#dropDownBtn"))
+  {
+    if (document.getElementById("dropDownContent").style.display==="block") {
+    document.getElementById("dropDownContent").style.display = "none";
+    }
+    if (document.getElementById("dropDown").classList.contains("menuPressed"))
+    {
+      document.getElementById("dropDown").classList.remove("menuPressed");
+    }
+  }
+
+}
+</script>
+<style>
+html{
+  background-color:#eaeaea;
+}
+
+#header {
+  width:100%;
+  height:50px;
+  background-color:#5a646f;
+  border-bottom: 1px solid #9a9a9a;
+  margin : 0px;
+  padding : 0px;
+  position:fixed;
+  left:0px;
+  top:0px;
+  box-shadow:0 2px 4px -1px rgba(0,0,0,0.06), 0 6px 5px 0 rgba(0,0,0,0.06), 0 1px 10px 0 rgba(0,0,0,0.08);
+  box-sizing : border-box;
+  z-index: 1000;
+}
+#headerContent {
+  top:0px;
+  margin: 0px auto 0px auto;
+  max-width:1024px;
+  box-sizing : border-box;
+  height:50px;
+  font: bold 14px Arial;
+  color:white;
+}
+#logo{
+  padding: 3px 10px 3px 0px; ;
+  overflow:hidden;
+  height:50px;
+  margin:0px;
+  box-sizing : border-box;
+  float:left;
+}
+.invertedText {
+  font-size:32px;
+  padding:2px 10px 2px 10px;
+  color:white;
+  font-family:'Saira Condensed', arial;
+  font-weight:700;
+}
+.headingText{
+  font-size:28px;
+
+  font-family:'Saira Condensed', arial;
+  font-weight:600;
+}
+.heading {
+  margin : 0 auto;
+}
+#nav{
+  padding: 0px 10px 0 0;
+}
+.navDiv{
+  top:0px;
+  float:right;
+  margin:0px;
+  padding:0px 10px 0px 10px;
+  height:50px;
+  border : 0px;
+  box-sizing : border-box;
+}
+.navDiv:hover{
+  float:right;
+  padding:0px 10px 0px 10px;
+  height: 50px;
+  border-style:solid;
+  border-color:blue;
+  border-bottom: 3px solid white ;
+  box-sizing : border-box;
+  background-color: #7f8c8d;
+}
+.navText{
+  top:0px;
+  margin:0px;
+  font-size:22px;
+  padding:7px 0px 5px 0;
+  height:50px;
+  color:white;
+  font-family:'Saira Condensed', arial;
+  font-weight: normal;
+  display:block;
+
+}
+.navText:hover{
+  top:0px;
+  margin:0px;
+  font-size:22px;
+  padding:7px 0px 5px 0;
+  height:50px;
+  font-family:'Saira Condensed', arial;
+  font-weight: normal;
+  display:block;
+
+
+}
+
+#bodyDiv{
+  position: fixed;
+  top:50px;
+  left:0px;
+  width:100%;
+  height:100%;
+  padding:0px;
+  border:0px;
+  overflow:auto;
+  z-index: -100;
+}
+#contentDiv{
+  margin: 0 auto;
+  max-width:1024px;
+  box-sizing: border-box;
+  border-left: 1px solid #e8e8e8;
+  border-right: 1px solid #e8e8e8;
+  background-color: rgb(250,250,250);
+  min-height: 100%;
+  padding: 50px 100px 50px 100px;
+}
+#contentDiv p {
+  font-size:22px;
+  font-family:'Saira Condensed', arial;
+
+}
+#footerDiv {
+	font-size : 18px;
+	font-family : 'Saira Condensed', arial;
+	text-align:center;
+	color:white;
+  left:0;
+  width:100%;
+  box-sizing: border-box;
+  background-color: #2c3e50;
+  padding:0px;
+  border: 0px;
+  margin:0px;
+  bottom:0px;
+  height: 110px;
+}
+#dropDown {
+  display:none;
+  float:right;
+  margin:0px;
+  padding: 0px;
+  width: 54px;
+  background-color: none;
+  height: 50px;
+}
+#dropDown:hover {
+    background-color :  #7f8c8d;
+    border-left : solid 1px white;
+}
+
+.menuPressed {
+    background-color :  #7f8c8d;
+    border-left : solid 1px white;
+}
+
+#dropDownContent {
+  display:none;
+  background-color: white;
+  padding-top: 10px;
+  z-index: 997;
+  top:50px;
+  width: 150px;
+  position: absolute;
+  float:right;
+  right: 0px;
+  box-shadow:0 2px 4px -1px rgba(0,0,0,0.06), 0 4px 5px 0 rgba(0,0,0,0.06), 0 1px 10px 0 rgba(0,0,0,0.08);
+}
+#dropDownContent a {
+  display: block;
+  margin:2px 15px;
+  font-size:22px;
+  color:black;
+
+  text-decoration: none;
+  font-family:'Saira Condensed', arial;
+  font-weight: normal;
+}
+#dropDownBtn {
+  width : 35px;
+  height: 35px;
+  margin:7.5px 0px 0px 10px;
+  border: 0px;
+}
+@media only screen and (max-width: 550px) {
+  #nav {
+    display:none;
+  }
+  .headingText {
+    font-size : 24px;
+  }
+  #contentDiv{
+    padding: 25px 20px 0px 20px;
+  }
+  #contentDiv p{
+    font-size : 20px;
+  }
+  #footerDiv{
+    font-size: 15px;
+  }
+  #dropDown {
+    display:block;
+  }
+  #headerContent {
+    box-shadow:0 2px 4px -1px rgba(0,0,0,0.06), 0 6px 5px 0 rgba(0,0,0,0.06), 0 1px 10px 0 rgba(0,0,0,0.08);
+  }
+}
+</style>
+</head>
+<body>
+<div id="header"><div id="headerContent">
+<div id="logo"><span class="invertedText">Anubhav Patel</span></div>
+<div id="nav">
+<div class="navDiv" ><span class="navText">Resume</span></div>
+<div class="navDiv"><span class="navText">About Me</span></div>
+<div class="navDiv"><span class="navText">Projects</span></div>
+<div class="navDiv"><span class="navText">Blog</span></div>
+</div>
+<div id="dropDown">
+  <img src="./img/menu.svg" onclick="toggleDropDownMenu();" id="dropDownBtn">
+  </div></div>
+<div id="dropDownContent">
+  <a href="#">Blog</a><br>
+  <a href="#">Projects</a><br>
+  <a href="#">About Me</a><br>
+  <a href="#">Resume</a><br>
+</div>
+<div id="bodyDiv">
+  <div id="contentDiv">
+    <div class="heading"><span class="headingText"># About Me<span></div>
+    <p><span>I'm <strong>Anubhav Dinesh Patel</strong>.</span></p>
+    <p>Currently, I’m an first year undergraduate student, pursuing Bachelor of Technology degree in Computer Science and Engineering at Indian Institute of Information Technology, Kalyani.</p>
+<p>Random garbage added to add lines to see what happens next.<br>sdad<br>asdasd<br>asdasd<br>assasdsad<br>sd</p>
+<br>
+<p><span>I'm <strong>Anubhav Dinesh Patel</strong>.</span></p>
+<p>Currently, I’m an first year undergraduate student, pursuing Bachelor of Technology degree in Computer Science and Engineering at Indian Institute of Information Technology, Kalyani.</p>
+<p>Random garbage added to add lines to see what happens next.<br>sdad<br>asdasd<br>asdasd<br>assasdsad<br>sd</p>
+<br>
+<p><span>I'm <strong>Anubhav Dinesh Patel</strong>.</span></p>
+<p>Currently, I’m an first year undergraduate student, pursuing Bachelor of Technology degree in Computer Science and Engineering at Indian Institute of Information Technology, Kalyani.</p>
+<p>Random garbage added to add lines to see what happens next.<br>sdad<br>asdasd<br>asdasd<br>assasdsad<br>sd</p>
+<br>
+<p><span>I'm <strong>Anubhav Dinesh Patel</strong>.</span></p>
+<p>Currently, I’m an first year undergraduate student, pursuing Bachelor of Technology degree in Computer Science and Engineering at Indian Institute of Information Technology, Kalyani.</p>
+<p>Random garbage added to add lines to see what happens next.<br>sdad<br>asdasd<br>asdasd<br>assasdsad<br>sd</p>
+<br>
+<p><span>I'm <strong>Anubhav Dinesh Patel</strong>.</span></p>
+<p>Currently, I’m an first year undergraduate student, pursuing Bachelor of Technology degree in Computer Science and Engineering at Indian Institute of Information Technology, Kalyani.</p>
+<p>Random garbage added to add lines to see what happens next.<br>sdad<br>asdasd<br>asdasd<br>assasdsad<br>sd</p>
+<br>
+<p><span>I'm <strong>Anubhav Dinesh Patel</strong>.</span></p>
+<p>Currently, I’m an first year undergraduate student, pursuing Bachelor of Technology degree in Computer Science and Engineering at Indian Institute of Information Technology, Kalyani.</p>
+<p>Random garbage added to add lines to see what happens next.<br>sdad<br>asdasd<br>asdasd<br>assasdsad<br>sd</p>
+<br>
+<p><span>I'm <strong>Anubhav Dinesh Patel</strong>.</span></p>
+<p>Currently, I’m an first year undergraduate student, pursuing Bachelor of Technology degree in Computer Science and Engineering at Indian Institute of Information Technology, Kalyani.</p>
+<p>Random garbage added to add lines to see what happens next.<br>sdad<br>asdasd<br>asdasd<br>assasdsad<br>sd</p>
+<br>
+<p><span>I'm <strong>Anubhav Dinesh Patel</strong>.</span></p>
+<p>Currently, I’m an first year undergraduate student, pursuing Bachelor of Technology degree in Computer Science and Engineering at Indian Institute of Information Technology, Kalyani.</p>
+<p>Random garbage added to add lines to see what happens next.<br>sdad<br>asdasd<br>asdasd<br>assasdsad<br>sd</p>
+<br>
+<p><span>I'm <strong>Anubhav Dinesh Patel</strong>.</span></p>
+<p>Currently, I’m an first year undergraduate student, pursuing Bachelor of Technology degree in Computer Science and Engineering at Indian Institute of Information Technology, Kalyani.</p>
+<p>Random garbage added to add lines to see what happens next.<br>sdad<br>asdasd<br>asdasd<br>assasdsad<br>sd</p>
+<br>
+<p><span>I'm <strong>Anubhav Dinesh Patel</strong>.</span></p>
+<p>Currently, I’m an first year undergraduate student, pursuing Bachelor of Technology degree in Computer Science and Engineering at Indian Institute of Information Technology, Kalyani.</p>
+<p>Random garbage added to add lines to see what happens next.<br>sdad<br>asdasd<br>asdasd<br>assasdsad<br>sd</p>
+<br>
+<p><span>I'm <strong>Anubhav Dinesh Patel</strong>.</span></p>
+<p>Currently, I’m an first year undergraduate student, pursuing Bachelor of Technology degree in Computer Science and Engineering at Indian Institute of Information Technology, Kalyani.</p>
+<p>Random garbage added to add lines to see what happens next.<br>sdad<br>asdasd<br>asdasd<br>assasdsad<br>sd</p>
+<br>
+  </div>
+<div id="footerDiv">This website is made from scratch by Anubhav Dinesh Patel.<br>&copy; 2017. All rights reserved.</div>
+</div>
+</body>
+</html>
